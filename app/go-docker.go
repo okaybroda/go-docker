@@ -34,10 +34,8 @@ func main() {
 
   // Set up routes
   r := mux.NewRouter()
-  r.HandleFunc("/posts", createPost).
-	Methods("POST")
-	r.HandleFunc("/posts", readPosts).
-	Methods("GET")
+  r.HandleFunc("/posts", createPost).Methods("POST")
+	r.HandleFunc("/posts", readPosts).Methods("GET")
   http.ListenAndServe(":8080", cors.AllowAll().Handler(r))
   log.Println("Listening on port 8080...")
 }

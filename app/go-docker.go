@@ -83,4 +83,4 @@ func readPosts(w http.ResponseWriter, r *http.Request) {
 	} else {
 	  responseJSON(w, result)
 	}
-  }
+}
